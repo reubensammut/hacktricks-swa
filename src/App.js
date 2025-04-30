@@ -1,7 +1,7 @@
 import React from 'react';
 
 function App() {
-  return 
+  return (
 <html>
   <head>
     <title>Static Web App Lab 4</title>
@@ -25,7 +25,7 @@ function App() {
       </div>
     </div>
   </body>
-</html>;
+</html> );
 }
 
 export default App;
