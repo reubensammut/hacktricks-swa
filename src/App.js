@@ -1,7 +1,8 @@
 import React from 'react';
 
 function App() {
-  return (<h1>Static Web App Lab 4 - Write</h1>
+  return (<div>
+      <h1>Static Web App Lab 4 - Write</h1>
       <div style="margin: 20px;">
         <h2>Secret Thoughts</h2>
         <textarea
@@ -11,7 +12,8 @@ function App() {
           placeholder="Paste your secret thoughts here..."
           style="width: 100%; max-width: 500px;"
         ></textarea>
-      </div>);
+      </div>
+    </div>);
 }
  
 export default App;
